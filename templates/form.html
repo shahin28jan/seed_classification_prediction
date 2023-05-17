@@ -1,0 +1,78 @@
+<html>
+<body>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>wheat seeds</title>
+        <div style="background-image: url(https://images7.alphacoders.com/451/451031.jpg);">
+        <!-- BootStrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    
+        <!-- css -->
+        <link rel="stylesheet" href="static/css/styles.css">
+        
+    
+    </head>
+    
+    <body>
+    
+        <!-- As a heading -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Classification of wheat seeds bY Shahin Anjum</a>
+                </div>
+            </div>
+        </nav>
+    
+        <br><br><br>
+    
+    
+        <div class="container">    
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="area">area:</label>
+        <input type="text" id="area" name="area" placeholder="Enter area value (float)">
+    </div>
+
+    <div class="form-group">
+        <label for="perimeter">perimeter:</label>
+        <input type="text" id="perimeter" name="perimeter" placeholder="Enter perimeter value (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="compactness">compactness:</label>
+        <input type="text" id="compactness" name="compactness" placeholder="Enter compactness value (float)">
+    </div>
+    
+    <div class="form-group">
+        <label for="length_kernel">length_kernel:</label>
+        <input type="text" id="length_kernel" name="length_kernel" placeholder="Enter length_kernel value (float)">
+    </div>
+  
+    <div class="form-group">
+        <label for="width_kernel">width_kernel:</label>
+        <input type="text" id="width_kernel" name="width_kernel" placeholder="Enter width_kernel value (float)">
+    </div>
+  
+    <div class="form-group">
+        <label for="asymmetry_coeff">asymmetry_coeff:</label>
+        <input type="text" id="asymmetry_coeff" name="asymmetry_coeff" placeholder="Enter asymmetry_coeff value (float)">
+    </div>    
+    
+    <div class="form-group">
+        <label for="length_of_kernel_groove">length_of_kernel_groove:</label>
+        <input type="text" id="length_of_kernel_groove" name="length_of_kernel_groove" placeholder="Enter length_of_kernel_groove value (float)">
+    </div>
+  
+
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
